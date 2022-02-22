@@ -11,8 +11,8 @@ This is a skeleton internal cheat base meant to be used for my [internal YouTube
 ## ☂️ Features
 - Intuitive project structure
 - MinHook included for hooking
-- Interface manager
-- Netvar Manager
+- [Interface manager](https://www.youtube.com/watch?v=C0wGdwnaArA)
+- [Netvar Manager](https://www.youtube.com/watch?v=VCsNZ0GRVzo)
 - Memory-related functions (Calling virtual functions, Pattern scanning)
 
 ## 🌠 Usage
