@@ -152,6 +152,7 @@
     <ClCompile Include="ext\minhook\trampoline.c" />
     <ClCompile Include="src\core\hooks.cpp" />
     <ClCompile Include="src\core\interfaces.cpp" />
+    <ClCompile Include="src\core\netvars.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\util\memory.cpp" />
   </ItemGroup>
@@ -167,7 +168,11 @@
     <ClInclude Include="src\core\globals.h" />
     <ClInclude Include="src\core\hooks.h" />
     <ClInclude Include="src\core\interfaces.h" />
+    <ClInclude Include="src\core\netvars.h" />
+    <ClInclude Include="src\util\hash.h" />
     <ClInclude Include="src\util\memory.h" />
+    <ClInclude Include="src\valve\centity.h" />
+    <ClInclude Include="src\valve\crecvtable.h" />
     <ClInclude Include="src\valve\ibaseclientdll.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
