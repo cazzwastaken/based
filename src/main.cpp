@@ -2,12 +2,20 @@
 #include <Windows.h>
 #include <thread>
 
+// expose our cheat to main.cpp
+#include "core/hooks.h"
+
 // setup our cheat & unload it when exit key is pressed
 DWORD WINAPI Setup(LPVOID lpParam)
 {
+	interfaces::Setup();
+	hooks::Setup();
+
 	// sleep our thread until unload key is pressed
 	while (!GetAsyncKeyState(VK_END))
 		std::this_thread::sleep_for(std::chrono::milliseconds(200));
+
+	hooks::Destroy();
 
 	FreeLibraryAndExitThread(static_cast<HMODULE>(lpParam), EXIT_SUCCESS);
 }
