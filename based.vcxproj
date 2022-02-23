@@ -182,6 +182,7 @@
     <ClInclude Include="src\valve\iclientleafsystem.h" />
     <ClInclude Include="src\valve\iclientmodeshared.h" />
     <ClInclude Include="src\valve\iengineclient.h" />
+    <ClInclude Include="src\valve\imaterialsystem.h" />
     <ClInclude Include="src\valve\istudiorender.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
