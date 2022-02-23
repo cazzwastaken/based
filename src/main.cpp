@@ -8,6 +8,7 @@
 // setup our cheat & unload it when exit key is pressed
 DWORD WINAPI Setup(LPVOID lpParam)
 {
+	memory::Setup();
 	interfaces::Setup();
 	netvars::Setup();
 	hooks::Setup();
