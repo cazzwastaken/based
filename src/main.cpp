@@ -8,17 +8,18 @@
 // setup our cheat & unload it when exit key is pressed
 DWORD WINAPI Setup(LPVOID lpParam)
 {
-	memory::Setup();
-	interfaces::Setup();
-	netvars::Setup();
-	hooks::Setup();
+	memory::Setup();		// find signatures
+	interfaces::Setup();	// capture interfaces
+	netvars::Setup();		// dump latest offsets
+	hooks::Setup();			// place hooks
 
 	// sleep our thread until unload key is pressed
 	while (!GetAsyncKeyState(VK_END))
 		std::this_thread::sleep_for(std::chrono::milliseconds(200));
 
-	hooks::Destroy();
+	hooks::Destroy();		// restore hooks
 
+	// unload library
 	FreeLibraryAndExitThread(static_cast<HMODULE>(lpParam), EXIT_SUCCESS);
 }
 
