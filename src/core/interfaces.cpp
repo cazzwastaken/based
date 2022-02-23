@@ -10,6 +10,7 @@ void interfaces::Setup() noexcept
 	entityList = Capture<IClientEntityList>("client.dll", "VClientEntityList003");
 	clientMode = **reinterpret_cast<IClientModeShared***>((*reinterpret_cast<unsigned int**>(client))[10] + 5);
 	engine = Capture<IEngineClient>("engine.dll", "VEngineClient014");
+	studioRender = Capture<IStudioRender>("studiorender.dll", "VStudioRender026");
 
 	// get the exported KeyValuesSystem function
 	if (const HINSTANCE handle = GetModuleHandle("vstdlib.dll"))
