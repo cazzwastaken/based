@@ -175,8 +175,11 @@
     <ClInclude Include="src\util\memory.h" />
     <ClInclude Include="src\valve\centity.h" />
     <ClInclude Include="src\valve\crecvtable.h" />
+    <ClInclude Include="src\valve\cusercmd.h" />
+    <ClInclude Include="src\valve\cvector.h" />
     <ClInclude Include="src\valve\ibaseclientdll.h" />
     <ClInclude Include="src\valve\icliententitylist.h" />
+    <ClInclude Include="src\valve\iclientmodeshared.h" />
     <ClInclude Include="src\valve\iengineclient.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
