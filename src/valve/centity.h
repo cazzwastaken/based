@@ -9,7 +9,7 @@ public:
 	NETVAR(GetFlags, "CBasePlayer->m_fFlags", std::uint32_t)
 
 	// example virtual functions
-	constexpr std::int32_t GetTeamNumber() noexcept 
+	constexpr std::int32_t GetTeam() noexcept 
 	{
 		return memory::Call<std::int32_t>(this, 88);
 	}
