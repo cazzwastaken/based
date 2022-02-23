@@ -2,6 +2,7 @@
 #include "../util/memory.h"
 
 #include "cvector.h"
+#include "iclientleafsystem.h"
 
 class IEngineClient
 {
@@ -23,8 +24,8 @@ public:
 		return memory::Call<bool>(this, 26);
 	}
 
-	constexpr void* GetBSPQueryTree() noexcept 
+	constexpr IClientLeafSystem* GetLeafSystem() noexcept 
 	{
-		return memory::Call<void*>(this, 43);
+		return memory::Call<IClientLeafSystem*>(this, 43);
 	}
 };

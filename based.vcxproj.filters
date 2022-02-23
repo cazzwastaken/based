@@ -113,5 +113,8 @@
     <ClInclude Include="src\valve\cvector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\valve\iclientleafsystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
