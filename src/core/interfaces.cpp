@@ -8,7 +8,13 @@ void interfaces::Setup() noexcept
 	// capture the interfaces
 	client = Capture<IBaseClientDLL>("client.dll", "VClient018");
 	entityList = Capture<IClientEntityList>("client.dll", "VClientEntityList003");
+	clientMode = **reinterpret_cast<IClientModeShared***>((*reinterpret_cast<unsigned int**>(client))[10] + 5);
 	engine = Capture<IEngineClient>("engine.dll", "VEngineClient014");
+
+	// get the exported KeyValuesSystem function
+	if (const HINSTANCE handle = GetModuleHandle("vstdlib.dll"))
+		// set our pointer by calling the function
+		keyValuesSystem = reinterpret_cast<void* (__cdecl*)()>(GetProcAddress(handle, "KeyValuesSystem"))();
 }
 
 template <typename Interface>
