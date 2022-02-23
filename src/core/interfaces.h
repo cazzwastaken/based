@@ -2,6 +2,8 @@
 #include "globals.h"
 
 #include "../valve/ibaseclientdll.h"
+#include "../valve/icliententitylist.h"
+#include "../valve/iengineclient.h"
 
 // learn more about interfaces -> https://www.youtube.com/watch?v=C0wGdwnaArA
 namespace interfaces
@@ -15,4 +17,6 @@ namespace interfaces
 
 	// interface pointers
 	inline IBaseClientDLL* client = nullptr;
+	inline IClientEntityList* entityList = nullptr;
+	inline IEngineClient* engine = nullptr;
 }

@@ -5,7 +5,10 @@
 
 void interfaces::Setup() noexcept
 {
+	// capture the interfaces
 	client = Capture<IBaseClientDLL>("client.dll", "VClient018");
+	entityList = Capture<IClientEntityList>("client.dll", "VClientEntityList003");
+	engine = Capture<IEngineClient>("engine.dll", "VEngineClient014");
 }
 
 template <typename Interface>
