@@ -9,6 +9,7 @@
 DWORD WINAPI Setup(LPVOID lpParam)
 {
 	interfaces::Setup();
+	netvars::Setup();
 	hooks::Setup();
 
 	// sleep our thread until unload key is pressed

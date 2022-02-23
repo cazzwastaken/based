@@ -5,11 +5,10 @@
 
 void netvars::Setup() noexcept
 {
-	for (CClientClass* clientClass = interfaces::client->GetAllClasses();
-		clientClass;
-		clientClass = clientClass->next)
-		if (CRecvTable* table = clientClass->table)
-			Dump(clientClass->networkName, table, 0);
+	// loop through linked-list and recursicely dump
+	for (CClientClass* client = interfaces::client->GetAllClasses(); client; client = client->next)
+		if (CRecvTable* table = client->table)
+			Dump(client->networkName, table, 0);
 }
 
 void netvars::Dump(const std::string_view base, CRecvTable* table, const std::uint32_t offset) noexcept
@@ -33,6 +32,7 @@ void netvars::Dump(const std::string_view base, CRecvTable* table, const std::ui
 			prop->table->name[0] == 'D')
 			Dump(base, prop->table, offset + prop->offset);
 
+		// place offset in netvar map
 		data[hash::RunTime(std::format("{}->{}", base, prop->name).c_str())] = offset + prop->offset;
 	}
 }
