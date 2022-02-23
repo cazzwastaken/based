@@ -3,6 +3,8 @@
 // include minhook for epic hookage
 #include "../../ext/minhook/minhook.h"
 
+#include <intrin.h>
+
 void hooks::Setup() noexcept
 {
 	MH_Initialize();
@@ -36,8 +38,13 @@ void hooks::Destroy() noexcept
 
 void* __stdcall hooks::AllocKeyValuesMemory(const std::int32_t size) noexcept
 {
-	// to do
+	// if function is returning to speficied addresses, return nullptr to "bypass"
+	if (const std::uint32_t address = reinterpret_cast<std::uint32_t>(_ReturnAddress());
+		address == reinterpret_cast<std::uint32_t>(memory::allocKeyValuesEngine) ||
+		address == reinterpret_cast<std::uint32_t>(memory::allocKeyValuesClient)) 
+		return nullptr;
 
+	// return original
 	return AllocKeyValuesMemoryOriginal(interfaces::keyValuesSystem, size);
 }
 
