@@ -6,6 +6,7 @@
 class IEngineClient
 {
 public:
+	// returns index of local player
 	constexpr std::int32_t GetLocalPlayerIndex() noexcept 
 	{
 		return memory::Call<std::int32_t>(this, 12);
@@ -16,7 +17,8 @@ public:
 		memory::Call<void, const CVector&>(this, 19, viewAngles);
 	}
 
-	constexpr bool InGame() noexcept 
+	// returns true if in-game
+	constexpr bool IsInGame() noexcept 
 	{
 		return memory::Call<bool>(this, 26);
 	}
