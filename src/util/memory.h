@@ -3,6 +3,9 @@
 
 namespace memory
 {
+	// call once to scan for all patterns
+	void Setup() noexcept;
+
 	// call virtual function @ given index
 	template <typename Return, typename ... Arguments>
 	constexpr Return Call(void* vmt, const std::uint32_t index, Arguments ... args) noexcept
@@ -16,4 +19,7 @@ namespace memory
 	{
 		return (*static_cast<void***>(vmt))[index];
 	}
+
+	// simple Pattern/AOB/Signature scanner
+	std::uint8_t* PatternScan(const char* moduleName, const char* pattern) noexcept;
 }
