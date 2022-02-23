@@ -22,4 +22,7 @@ namespace memory
 
 	// simple Pattern/AOB/Signature scanner
 	std::uint8_t* PatternScan(const char* moduleName, const char* pattern) noexcept;
+
+	inline std::uint8_t* allocKeyValuesClient = nullptr;
+	inline std::uint8_t* allocKeyValuesEngine = nullptr;
 }
