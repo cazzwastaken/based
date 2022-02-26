@@ -17,7 +17,8 @@ public:
 };
 
 // we don't use any of these functions
-class IClientLeafSystem
+// https://gitlab.com/KittenPopo/csgo-2018-source/-/blob/main/public/bsptreedata.h#L64
+class ISpacialQuery
 {
 public:
 

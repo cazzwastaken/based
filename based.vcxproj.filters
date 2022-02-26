@@ -113,7 +113,7 @@
     <ClInclude Include="src\valve\cvector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\valve\iclientleafsystem.h">
+    <ClInclude Include="src\valve\ispatialquery.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\valve\istudiorender.h">
