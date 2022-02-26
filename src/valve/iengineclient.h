@@ -24,7 +24,7 @@ public:
 		return memory::Call<bool>(this, 26);
 	}
 
-	constexpr ISpacialQuery* GetBSPQueryTree() noexcept 
+	constexpr ISpacialQuery* GetBSPTreeQuery() noexcept
 	{
 		return memory::Call<ISpacialQuery*>(this, 43);
 	}
