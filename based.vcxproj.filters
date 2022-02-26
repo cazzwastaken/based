@@ -122,5 +122,8 @@
     <ClInclude Include="src\valve\imaterialsystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\valve\cclientclass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
