@@ -2,7 +2,7 @@
 #include "../util/memory.h"
 
 #include "cvector.h"
-#include "iclientleafsystem.h"
+#include "ispatialquery.h"
 
 class IEngineClient
 {
@@ -24,8 +24,8 @@ public:
 		return memory::Call<bool>(this, 26);
 	}
 
-	constexpr IClientLeafSystem* GetClientLeafSystem() noexcept 
+	constexpr ISpacialQuery* GetBSPQueryTree() noexcept 
 	{
-		return memory::Call<IClientLeafSystem*>(this, 43);
+		return memory::Call<ISpacialQuery*>(this, 43);
 	}
 };
