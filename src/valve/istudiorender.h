@@ -1,6 +1,7 @@
 #pragma once
 #include "../util/memory.h"
 
+// https://gitlab.com/KittenPopo/csgo-2018-source/-/blob/main/public/istudiorender.h#L201
 class CEntity;
 class CDrawModelInfo
 {
@@ -14,6 +15,7 @@ public:
 	CEntity* renderable;
 };
 
+// https://gitlab.com/KittenPopo/csgo-2018-source/-/blob/main/public/istudiorender.h#L324
 class IMaterial;
 class IStudioRender
 {

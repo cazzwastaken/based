@@ -1,6 +1,7 @@
 #pragma once
 #include <cstdint>
 
+// https://gitlab.com/KittenPopo/csgo-2018-source/-/blob/main/game/client/clientleafsystem.cpp#L240
 class CEntity;
 class CRenderableInfo
 {
