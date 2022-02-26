@@ -1,7 +1,7 @@
 #pragma once
 #include "../util/memory.h"
 
-class CMaterial
+class IMaterial
 {
 public:
 	enum EMaterialVarFlag : std::int32_t
@@ -19,8 +19,8 @@ public:
 class IMaterialSystem
 {
 public:
-	constexpr CMaterial* FindMaterial(const char* name) noexcept
+	constexpr IMaterial* FindMaterial(const char* name) noexcept
 	{
-		return memory::Call<CMaterial*>(this, 84, name, nullptr, true, nullptr);
+		return memory::Call<IMaterial*>(this, 84, name, nullptr, true, nullptr);
 	}
 };
