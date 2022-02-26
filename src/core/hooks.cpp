@@ -64,7 +64,7 @@ bool __stdcall hooks::CreateMove(float frameTime, CUserCmd* cmd) noexcept
 	if (globals::localPlayer && globals::localPlayer->IsAlive())
 	{
 		// example bhop
-		if (!(globals::localPlayer->GetFlags() & 1))
+		if (!(globals::localPlayer->GetFlags() & CEntity::FL_ONGROUND))
 			cmd->buttons &= ~CUserCmd::IN_JUMP;
 	}
 
