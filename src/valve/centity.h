@@ -4,7 +4,9 @@
 
 #include "cclientclass.h"
 #include "cvector.h"
+#include "cmatrix.h"
 
+class CModel;
 class CEntity
 {
 public:
@@ -44,18 +46,28 @@ public:
 		FL_UNBLOCKABLE_BY_PLAYER = (1 << 31)
 	};
 
-	// example netvar
 	NETVAR(GetFlags, "CBasePlayer->m_fFlags", std::int32_t);
 
-	// networkable virtual functions
+	// renderable virtual functions (+0x4)
+	constexpr CModel* GetModel() noexcept
+	{
+		return memory::Call<CModel*>(this + 0x4, 8);
+	}
+
+	constexpr bool SetupBones(CMatrix3x4* out, std::int32_t max, std::int32_t mask, float currentTime) noexcept
+	{
+		return memory::Call<bool>(this + 0x4, 13, out, max, mask, currentTime);
+	}
+
+	// networkable virtual functions (+0x8)
 	constexpr CClientClass* GetClientClass() noexcept
 	{
-		return memory::Call<CClientClass*>(this + sizeof(std::uintptr_t) * 2, 2);
+		return memory::Call<CClientClass*>(this + 0x8, 2);
 	}
 
 	constexpr bool IsDormant() noexcept
 	{
-		return memory::Call<bool>(this + sizeof(std::uintptr_t) * 2, 9);
+		return memory::Call<bool>(this + 0x8, 9);
 	}
 
 	constexpr std::int32_t GetIndex() noexcept
@@ -64,9 +76,9 @@ public:
 	}
 
 	// entity virtual functions
-	constexpr CVector& GetAbsOrigin() noexcept
+	constexpr const CVector& GetAbsOrigin() noexcept
 	{
-		return memory::Call<CVector&>(this, 10);
+		return memory::Call<const CVector&>(this, 10);
 	}
 
 	constexpr std::int32_t GetTeam() noexcept 
