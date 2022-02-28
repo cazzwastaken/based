@@ -5,6 +5,7 @@
 #include "../valve/icliententitylist.h"
 #include "../valve/iclientmodeshared.h"
 #include "../valve/iengineclient.h"
+#include "../valve/iglobalvars.h"
 #include "../valve/imaterialsystem.h"
 #include "../valve/istudiorender.h"
 
@@ -23,6 +24,7 @@ namespace interfaces
 	inline IClientEntityList* entityList = nullptr;
 	inline IClientModeShared* clientMode = nullptr;
 	inline IEngineClient* engine = nullptr;
+	inline IGlobalVars* globals = nullptr;
 	inline IMaterialSystem* materialSystem = nullptr;
 	inline IStudioRender* studioRender = nullptr;
 
