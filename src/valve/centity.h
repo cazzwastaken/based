@@ -2,6 +2,9 @@
 #include "../util/memory.h"
 #include "../core/netvars.h"
 
+#include "cclientclass.h"
+#include "cvector.h"
+
 class CEntity
 {
 public:
@@ -42,9 +45,30 @@ public:
 	};
 
 	// example netvar
-	NETVAR(GetFlags, "CBasePlayer->m_fFlags", std::int32_t)
+	NETVAR(GetFlags, "CBasePlayer->m_fFlags", std::int32_t);
 
-	// example virtual functions
+	// networkable virtual functions
+	constexpr CClientClass* GetClientClass() noexcept
+	{
+		return memory::Call<CClientClass*>(this + sizeof(std::uintptr_t) * 2, 2);
+	}
+
+	constexpr bool IsDormant() noexcept
+	{
+		return memory::Call<bool>(this + sizeof(std::uintptr_t) * 2, 9);
+	}
+
+	constexpr std::int32_t GetIndex() noexcept
+	{
+		return memory::Call<std::int32_t>(this + sizeof(std::uintptr_t) * 2, 10);
+	}
+
+	// entity virtual functions
+	constexpr CVector& GetAbsOrigin() noexcept
+	{
+		return memory::Call<CVector&>(this, 10);
+	}
+
 	constexpr std::int32_t GetTeam() noexcept 
 	{
 		return memory::Call<std::int32_t>(this, 88);
