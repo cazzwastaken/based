@@ -58,8 +58,8 @@ bool __stdcall hooks::CreateMove(float frameTime, CUserCmd* cmd) noexcept
 	if (CreateMoveOriginal(interfaces::clientMode, frameTime, cmd))
 		interfaces::engine->SetViewAngles(cmd->viewAngles);
 
-	// set our local player
-	globals::localPlayer = interfaces::entityList->GetEntityFromIndex(interfaces::engine->GetLocalPlayerIndex());
+	// get our local player here
+	globals::UpdateLocalPlayer();
 
 	if (globals::localPlayer && globals::localPlayer->IsAlive())
 	{
