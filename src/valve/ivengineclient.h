@@ -4,7 +4,7 @@
 #include "cvector.h"
 #include "ispatialquery.h"
 
-class IEngineClient
+class IVEngineClient
 {
 public:
 	// returns index of local player

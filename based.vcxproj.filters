@@ -104,7 +104,7 @@
     <ClInclude Include="src\valve\icliententitylist.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\valve\iengineclient.h">
+    <ClInclude Include="src\valve\ivengineclient.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\valve\iclientmodeshared.h">
