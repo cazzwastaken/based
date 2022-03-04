@@ -6,6 +6,25 @@
 #include "cvector.h"
 #include "cmatrix.h"
 
+class CEntity;
+class IClientUnknown
+{
+public:
+	constexpr CEntity* GetBaseEntity() noexcept
+	{
+		return memory::Call<CEntity*>(this, 7);
+	}
+};
+
+class IClientRenderable
+{
+public:
+	constexpr IClientUnknown* GetIClientUnknown() noexcept
+	{
+		return memory::Call<IClientUnknown*>(this, 0);
+	}
+};
+
 class CModel;
 class CEntity
 {

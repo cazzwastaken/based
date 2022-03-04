@@ -2,7 +2,7 @@
 #include "../util/memory.h"
 
 // https://gitlab.com/KittenPopo/csgo-2018-source/-/blob/main/public/istudiorender.h#L201
-class CEntity;
+class IClientRenderable;
 class CDrawModelInfo
 {
 public:
@@ -12,7 +12,7 @@ public:
 	std::int32_t skin;
 	std::int32_t body;
 	std::int32_t hitboxSet;
-	CEntity* renderable;
+	IClientRenderable* renderable;
 };
 
 // https://gitlab.com/KittenPopo/csgo-2018-source/-/blob/main/public/istudiorender.h#L324
