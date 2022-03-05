@@ -2,11 +2,11 @@
 #include <cstdint>
 
 // https://gitlab.com/KittenPopo/csgo-2018-source/-/blob/main/game/client/clientleafsystem.cpp#L240
-class CEntity;
+class IClientRenderable;
 class CRenderableInfo
 {
 public:
-	CEntity* renderable;
+	IClientRenderable* renderable;
 	void* alphaProperty;
 	std::int32_t enumCount;
 	std::int32_t renderFrame;
@@ -15,6 +15,11 @@ public:
 	std::int16_t area;
 	std::int16_t flags;
 	std::int16_t flags2;
+	CVector bloatedAbsMins;
+	CVector bloatedAbsMaxs;
+	CVector mins;
+	CVector maxs;
+	std::byte pad0[0x4];
 };
 
 // we don't use any of these functions
