@@ -182,6 +182,7 @@
     <ClInclude Include="src\valve\cvector.h" />
     <ClInclude Include="src\valve\ibaseclientdll.h" />
     <ClInclude Include="src\valve\icliententitylist.h" />
+    <ClInclude Include="src\valve\ienginetrace.h" />
     <ClInclude Include="src\valve\iglobalvars.h" />
     <ClInclude Include="src\valve\ispatialquery.h" />
     <ClInclude Include="src\valve\iclientmodeshared.h" />
