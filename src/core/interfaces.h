@@ -8,6 +8,7 @@
 #include "../valve/imaterialsystem.h"
 #include "../valve/istudiorender.h"
 #include "../valve/ivengineclient.h"
+#include "../valve/ivmodelinfo.h"
 
 // learn more about interfaces -> https://www.youtube.com/watch?v=C0wGdwnaArA
 namespace interfaces
@@ -27,6 +28,7 @@ namespace interfaces
 	inline IMaterialSystem* materialSystem = nullptr;
 	inline IStudioRender* studioRender = nullptr;
 	inline IVEngineClient* engine = nullptr;
+	inline IVModelInfo* modelInfo = nullptr;
 
 	// other
 	inline void* keyValuesSystem = nullptr;

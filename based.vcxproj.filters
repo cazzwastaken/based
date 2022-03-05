@@ -134,5 +134,8 @@
     <ClInclude Include="src\valve\iglobalvars.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\valve\ivmodelinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

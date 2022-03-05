@@ -13,6 +13,7 @@ void interfaces::Setup() noexcept
 	materialSystem = Capture<IMaterialSystem>("materialsystem.dll", "VMaterialSystem080");
 	studioRender = Capture<IStudioRender>("studiorender.dll", "VStudioRender026");
 	engine = Capture<IVEngineClient>("engine.dll", "VEngineClient014");
+	modelInfo = Capture<IVModelInfo>("engine.dll", "VModelInfoClient004");
 
 	// get the exported KeyValuesSystem function
 	if (const HINSTANCE handle = GetModuleHandle("vstdlib.dll"))
