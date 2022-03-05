@@ -26,6 +26,19 @@ public:
 class IVModelInfo
 {
 public:
+	enum ERenderFlags : std::uint32_t
+	{
+		RENDER_FLAGS_DISABLE_RENDERING = 0x01,
+		RENDER_FLAGS_HASCHANGED = 0x02,
+		RENDER_FLAGS_ALTERNATE_SORTING = 0x04,
+		RENDER_FLAGS_RENDER_WITH_VIEWMODELS = 0x08,
+		RENDER_FLAGS_BLOAT_BOUNDS = 0x10,
+		RENDER_FLAGS_BOUNDS_VALID = 0x20,
+		RENDER_FLAGS_BOUNDS_ALWAYS_RECOMPUTE = 0x40,
+		RENDER_FLAGS_IS_SPRITE = 0x80,
+		RENDER_FLAGS_FORCE_OPAQUE_PASS = 0x100,
+	};
+
 	constexpr const char* GetModelName(const CModel* model) noexcept
 	{
 		return memory::Call<const char*>(this, 3, model);
