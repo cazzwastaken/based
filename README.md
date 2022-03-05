@@ -3,7 +3,7 @@ This is a skeleton internal cheat base meant to be used for my [internal YouTube
 
 ## 🌌 Videos
 `To Come:`
-- Chams / Colored Models
+- [Chams / Colored Models](https://www.youtube.com/watch?v=xXhVCUieL08)
 - Glow (Weapon, Player, Grenade, Bomb)
 - ESP (Name, Box, Skeleton)
 - And so on...
