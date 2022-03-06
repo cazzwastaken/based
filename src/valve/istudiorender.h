@@ -66,4 +66,9 @@ public:
 	{
 		memory::Call<void>(this, 33, material, type, index);
 	}
+
+	constexpr bool IsForcedMaterialOverride() noexcept
+	{
+		return memory::Call<bool>(this, 34);
+	}
 };
