@@ -65,9 +65,10 @@ public:
 		FL_UNBLOCKABLE_BY_PLAYER = (1 << 31)
 	};
 
+public: // netvars
 	NETVAR(GetFlags, "CBasePlayer->m_fFlags", std::int32_t);
 
-	// renderable virtual functions (+0x4)
+public: // renderable virtual functions (+0x4)
 	constexpr CModel* GetModel() noexcept
 	{
 		return memory::Call<CModel*>(this + 0x4, 8);
@@ -78,7 +79,7 @@ public:
 		return memory::Call<bool>(this + 0x4, 13, out, max, mask, currentTime);
 	}
 
-	// networkable virtual functions (+0x8)
+public: // networkable virtual functions (+0x8)
 	constexpr CClientClass* GetClientClass() noexcept
 	{
 		return memory::Call<CClientClass*>(this + 0x8, 2);
@@ -94,7 +95,7 @@ public:
 		return memory::Call<std::int32_t>(this + 0x8, 10);
 	}
 
-	// entity virtual functions
+public: // entity virtual functions
 	constexpr const CVector& GetAbsOrigin() noexcept
 	{
 		return memory::Call<const CVector&>(this, 10);
