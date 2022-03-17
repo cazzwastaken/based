@@ -176,6 +176,7 @@
     <ClInclude Include="src\util\memory.h" />
     <ClInclude Include="src\valve\cclientclass.h" />
     <ClInclude Include="src\valve\centity.h" />
+    <ClInclude Include="src\valve\ckeyvalues.h" />
     <ClInclude Include="src\valve\cmatrix.h" />
     <ClInclude Include="src\valve\crecvtable.h" />
     <ClInclude Include="src\valve\cusercmd.h" />
