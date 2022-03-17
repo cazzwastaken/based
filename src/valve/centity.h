@@ -91,7 +91,7 @@ public:
 
 	constexpr std::int32_t GetIndex() noexcept
 	{
-		return memory::Call<std::int32_t>(this + sizeof(std::uintptr_t) * 2, 10);
+		return memory::Call<std::int32_t>(this + 0x8, 10);
 	}
 
 	// entity virtual functions
