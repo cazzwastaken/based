@@ -1,6 +1,8 @@
 #pragma once
 #include "../util/memory.h"
 
+#include "ckeyvalues.h"
+
 class IMaterial
 {
 public:
@@ -19,6 +21,11 @@ public:
 class IMaterialSystem
 {
 public:
+	constexpr IMaterial* CreateMaterial(const char* name, CKeyValues* kv) noexcept
+	{
+		return memory::Call<IMaterial*>(this, 83, name, kv);
+	}
+
 	constexpr IMaterial* FindMaterial(const char* name) noexcept
 	{
 		return memory::Call<IMaterial*>(this, 84, name, nullptr, true, nullptr);
