@@ -20,6 +20,10 @@ namespace memory
 		return (*static_cast<void***>(vmt))[index];
 	}
 
+	inline std::uintptr_t RelativeToAbsolute(std::uintptr_t relAddr) noexcept {
+		return static_cast<std::uintptr_t>(relAddr + 4 + *reinterpret_cast<std::int32_t*>(relAddr));
+	}
+
 	// simple Pattern/AOB/Signature scanner
 	std::uint8_t* PatternScan(const char* moduleName, const char* pattern) noexcept;
 
