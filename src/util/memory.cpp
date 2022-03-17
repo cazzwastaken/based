@@ -8,6 +8,7 @@ void memory::Setup() noexcept
 {
 	allocKeyValuesClient = PatternScan("client.dll", "FF 52 04 85 C0 74 0C 56") + 3;
 	allocKeyValuesEngine = PatternScan("engine.dll", "FF 52 04 85 C0 74 0C 56") + 3;
+    insertIntoTree = PatternScan("client.dll", "56 52 FF 50 18") + 5;
 }
 
 std::uint8_t* memory::PatternScan(const char* moduleName, const char* pattern) noexcept

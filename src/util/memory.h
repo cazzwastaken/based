@@ -29,4 +29,5 @@ namespace memory
 
 	inline std::uint8_t* allocKeyValuesClient = nullptr;
 	inline std::uint8_t* allocKeyValuesEngine = nullptr;
+	inline std::uint8_t* insertIntoTree = nullptr;
 }
