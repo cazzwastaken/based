@@ -1,11 +1,13 @@
 #pragma once
 #include "globals.h"
 
+// interfaces
 #include "../valve/ibaseclientdll.h"
 #include "../valve/icliententitylist.h"
 #include "../valve/iclientmodeshared.h"
 #include "../valve/ienginetrace.h"
 #include "../valve/iglobalvars.h"
+#include "../valve/iglowmanager.h"
 #include "../valve/imaterialsystem.h"
 #include "../valve/istudiorender.h"
 #include "../valve/ivengineclient.h"
@@ -27,6 +29,7 @@ namespace interfaces
 	inline IClientModeShared* clientMode = nullptr;
 	inline IEngineTrace* engineTrace = nullptr;
 	inline IGlobalVars* globals = nullptr;
+	inline IGlowManager* glow = nullptr;
 	inline IMaterialSystem* materialSystem = nullptr;
 	inline IStudioRender* studioRender = nullptr;
 	inline IVEngineClient* engine = nullptr;
