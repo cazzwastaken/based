@@ -35,13 +35,13 @@ public:
         static constexpr int END_OF_FREE_LIST = -1;
         static constexpr int ENTRY_IN_USE = -2;
 
-        constexpr bool IsUnused() const 
+        constexpr bool IsUnused() const noexcept
         {
             return nextFreeSlot != ENTRY_IN_USE;
         }
 
         // helper function to set the glow color
-        constexpr void SetColor(float r, float g, float b, float a = 1.f)
+        constexpr void SetColor(float r, float g, float b, float a = 1.f) noexcept
         {
             color.r = r;
             color.g = g;
