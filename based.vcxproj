@@ -176,10 +176,12 @@
     <ClInclude Include="src\util\memory.h" />
     <ClInclude Include="src\valve\cclientclass.h" />
     <ClInclude Include="src\valve\centity.h" />
+    <ClInclude Include="src\valve\iglowmanager.h" />
     <ClInclude Include="src\valve\ckeyvalues.h" />
     <ClInclude Include="src\valve\cmatrix.h" />
     <ClInclude Include="src\valve\crecvtable.h" />
     <ClInclude Include="src\valve\cusercmd.h" />
+    <ClInclude Include="src\valve\cutlvector.h" />
     <ClInclude Include="src\valve\cvector.h" />
     <ClInclude Include="src\valve\ibaseclientdll.h" />
     <ClInclude Include="src\valve\icliententitylist.h" />
