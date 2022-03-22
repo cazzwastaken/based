@@ -44,7 +44,7 @@ public:
 		return memory::Call<const char*>(this, 3, model);
 	}
 
-	constexpr CStudioHdr* GetStuioModel(const CModel* model) noexcept
+	constexpr CStudioHdr* GetStudioModel(const CModel* model) noexcept
 	{
 		return memory::Call<CStudioHdr*>(this, 32, model);
 	}
