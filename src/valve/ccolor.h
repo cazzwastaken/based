@@ -1,19 +1,17 @@
 #pragma once
+#include <cstdint>
 
-struct Color_t
+class CColor 
 {
-	unsigned char r, g, b, a;
+public:
+	constexpr CColor(std::uint8_t r, std::uint8_t g, std::uint8_t b, std::uint8_t a = 255) :
+		r(r), g(g), b(b), a(a) { }
 
-	Color_t() = default;
+	static CColor Red(std::uint8_t a = 255) { return { 255, 0, 0, a }; }
+	static CColor Green(std::uint8_t a = 255) { return { 0, 255, 0, a }; }
+	static CColor Blue(std::uint8_t a = 255) { return { 0, 0, 255, a }; }
+	static CColor Black(std::uint8_t a = 255) { return { 0, 0, 0, a }; }
+	static CColor White(std::uint8_t a = 255) { return { 255, 255, 255, a }; }
 
-	Color_t(unsigned char _r, unsigned char _g, unsigned char _b, unsigned char _a = 255) : r(_r), g(_g), b(_b), a(_a) { }
-
-	struct palletes_t
-	{
-		static auto red(unsigned char alpha = 255) { return Color_t(255, 0, 0, alpha); }
-		static auto green(unsigned char alpha = 255) { return Color_t(0, 255, 0, alpha); }
-		static auto blue(unsigned char alpha = 255) { return Color_t(0, 0, 255, alpha); }
-		static auto black(unsigned char alpha = 255) { return Color_t(0, 0, 0, alpha); }
-		static auto white(unsigned char alpha = 255) { return Color_t(255, 255, 255, alpha); }
-	};
+	std::uint8_t r{ }, g{ }, b{ }, a{ };
 };
