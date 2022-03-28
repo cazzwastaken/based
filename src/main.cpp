@@ -5,6 +5,8 @@
 // expose our cheat to main.cpp
 #include "core/hooks.h"
 
+#define CAZZ_BIG_MAN FALSE
+
 // setup our cheat & unload it when exit key is pressed
 DWORD WINAPI Setup(LPVOID lpParam)
 {

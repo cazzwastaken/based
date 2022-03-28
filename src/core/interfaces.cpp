@@ -16,6 +16,7 @@ void interfaces::Setup() noexcept
 	studioRender = Capture<IStudioRender>("studiorender.dll", "VStudioRender026");
 	engine = Capture<IVEngineClient>("engine.dll", "VEngineClient014");
 	modelInfo = Capture<IVModelInfo>("engine.dll", "VModelInfoClient004");
+	device = **reinterpret_cast<IDirect3DDevice9***>(memory::PatternScan("shaderapidx9.dll", "A1 ? ? ? ? 50 8B 08 FF 51 0C") + 0x1);
 
 	// get the exported KeyValuesSystem function
 	if (const HINSTANCE handle = GetModuleHandle("vstdlib.dll"))

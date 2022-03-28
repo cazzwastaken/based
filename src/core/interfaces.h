@@ -13,6 +13,10 @@
 #include "../valve/ivengineclient.h"
 #include "../valve/ivmodelinfo.h"
 
+#include "../../ext/imgui/imgui.h"
+#include "../../ext/imgui/imgui_impl_dx9.h"
+#include "../../ext/imgui/imgui_impl_win32.h"
+
 // learn more about interfaces -> https://www.youtube.com/watch?v=C0wGdwnaArA
 namespace interfaces
 {
@@ -34,6 +38,7 @@ namespace interfaces
 	inline IStudioRender* studioRender = nullptr;
 	inline IVEngineClient* engine = nullptr;
 	inline IVModelInfo* modelInfo = nullptr;
+	inline IDirect3DDevice9* device = nullptr;
 
 	// other
 	inline void* keyValuesSystem = nullptr;
