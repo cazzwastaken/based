@@ -2,9 +2,11 @@
 This is a skeleton internal cheat base meant to be used for my [internal YouTube tutorials](https://www.youtube.com/watch?v=vF5fzIDUJVw&list=PLfXYbj_AHLD7I5NxCFHM2gYFihnDD0e5O). This was made to avoid me having to recode all the boiler-plate nonsense each video.
 
 ## 🌌 Videos
-`To Come:`
 - [Chams / Colored Models](https://www.youtube.com/watch?v=xXhVCUieL08)
-- Glow (Weapon, Player, Grenade, Bomb)
+- [Glow (Weapon, Player, Grenade, Bomb)](https://www.youtube.com/watch?v=QU3SN2UIAe4)
+
+`To Come:`
+
 - ESP (Name, Box, Skeleton)
 - And so on...
 
