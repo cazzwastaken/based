@@ -14,6 +14,7 @@ void interfaces::Setup() noexcept
 	glow = *reinterpret_cast<IGlowManager**>(memory::glowManager);
 	materialSystem = Capture<IMaterialSystem>("materialsystem.dll", "VMaterialSystem080");
 	studioRender = Capture<IStudioRender>("studiorender.dll", "VStudioRender026");
+	surface = Capture<ISurface>("vguimatsurface.dll", "VGUI_Surface031");
 	engine = Capture<IVEngineClient>("engine.dll", "VEngineClient014");
 	modelInfo = Capture<IVModelInfo>("engine.dll", "VModelInfoClient004");
 	panel = Capture<IVPanel>("vgui2.dll", "VGUI_Panel009");

@@ -190,6 +190,7 @@
     <ClInclude Include="src\valve\iglobalvars.h" />
     <ClInclude Include="src\valve\ispatialquery.h" />
     <ClInclude Include="src\valve\iclientmodeshared.h" />
+    <ClInclude Include="src\valve\isurface.h" />
     <ClInclude Include="src\valve\ivengineclient.h" />
     <ClInclude Include="src\valve\imaterialsystem.h" />
     <ClInclude Include="src\valve\istudiorender.h" />
