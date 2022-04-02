@@ -158,5 +158,8 @@
     <ClInclude Include="src\valve\isurface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\valve\ivdebugoverlay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

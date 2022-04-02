@@ -11,6 +11,7 @@
 #include "../valve/imaterialsystem.h"
 #include "../valve/istudiorender.h"
 #include "../valve/isurface.h"
+#include "../valve/ivdebugoverlay.h"
 #include "../valve/ivengineclient.h"
 #include "../valve/ivmodelinfo.h"
 #include "../valve/ivpanel.h"
@@ -35,6 +36,7 @@ namespace interfaces
 	inline IMaterialSystem* materialSystem = nullptr;
 	inline IStudioRender* studioRender = nullptr;
 	inline ISurface* surface = nullptr;
+	inline IVDebugOverlay* debugOverlay = nullptr;
 	inline IVEngineClient* engine = nullptr;
 	inline IVModelInfo* modelInfo = nullptr;
 	inline IVPanel* panel = nullptr;
