@@ -152,5 +152,8 @@
     <ClInclude Include="src\valve\ccolor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\valve\ivpanel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

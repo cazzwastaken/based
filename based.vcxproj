@@ -194,6 +194,7 @@
     <ClInclude Include="src\valve\imaterialsystem.h" />
     <ClInclude Include="src\valve\istudiorender.h" />
     <ClInclude Include="src\valve\ivmodelinfo.h" />
+    <ClInclude Include="src\valve\ivpanel.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
