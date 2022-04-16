@@ -6,6 +6,7 @@
 #include "../valve/icliententitylist.h"
 #include "../valve/iclientmodeshared.h"
 #include "../valve/ienginetrace.h"
+#include "../valve/ienginevgui.h"
 #include "../valve/iglobalvars.h"
 #include "../valve/iglowmanager.h"
 #include "../valve/imaterialsystem.h"
@@ -31,6 +32,7 @@ namespace interfaces
 	inline IClientEntityList* entityList = nullptr;
 	inline IClientModeShared* clientMode = nullptr;
 	inline IEngineTrace* engineTrace = nullptr;
+	inline IEngineVGui* engineVGui = nullptr;
 	inline IGlobalVars* globals = nullptr;
 	inline IGlowManager* glow = nullptr;
 	inline IMaterialSystem* materialSystem = nullptr;

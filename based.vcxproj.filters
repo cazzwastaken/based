@@ -161,5 +161,8 @@
     <ClInclude Include="src\valve\ivdebugoverlay.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\valve\ienginevgui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

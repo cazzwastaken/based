@@ -10,6 +10,7 @@ void interfaces::Setup() noexcept
 	entityList = Capture<IClientEntityList>("client.dll", "VClientEntityList003");
 	clientMode = **reinterpret_cast<IClientModeShared***>((*reinterpret_cast<unsigned int**>(client))[10] + 5);
 	engineTrace = Capture<IEngineTrace>("engine.dll", "EngineTraceClient004");
+	engineVGui = Capture<IEngineVGui>("engine.dll", "VEngineVGui001");
 	globals = **reinterpret_cast<IGlobalVars***>((*reinterpret_cast<uintptr_t**>(client))[11] + 10);
 	glow = *reinterpret_cast<IGlowManager**>(memory::glowManager);
 	materialSystem = Capture<IMaterialSystem>("materialsystem.dll", "VMaterialSystem080");

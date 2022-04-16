@@ -177,6 +177,7 @@
     <ClInclude Include="src\valve\cclientclass.h" />
     <ClInclude Include="src\valve\ccolor.h" />
     <ClInclude Include="src\valve\centity.h" />
+    <ClInclude Include="src\valve\ienginevgui.h" />
     <ClInclude Include="src\valve\iglowmanager.h" />
     <ClInclude Include="src\valve\ckeyvalues.h" />
     <ClInclude Include="src\valve\cmatrix.h" />
