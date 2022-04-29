@@ -17,3 +17,9 @@ public:
 
 	float data[3][4];
 };
+
+class CMatrix4x4
+{
+public:
+	float data[4][4];
+};
