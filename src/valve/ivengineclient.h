@@ -2,6 +2,7 @@
 #include "../util/memory.h"
 
 #include "cvector.h"
+#include "cmatrix.h"
 #include "ispatialquery.h"
 
 class IVEngineClient
@@ -22,6 +23,11 @@ public:
 	constexpr bool IsInGame() noexcept 
 	{
 		return memory::Call<bool>(this, 26);
+	}
+
+	constexpr const CMatrix4x4& WorldToScreenMatrix() noexcept
+	{
+		return memory::Call<const CMatrix4x4&>(this, 37);
 	}
 
 	constexpr ISpacialQuery* GetBSPTreeQuery() noexcept
