@@ -125,4 +125,9 @@ public: // entity virtual functions
 	{
 		return memory::Call<bool>(this, 166);
 	}
+
+	constexpr CEntity* GetObserverTarget() noexcept
+	{
+		return memory::Call<CEntity*>(this, 295);
+	}
 };
