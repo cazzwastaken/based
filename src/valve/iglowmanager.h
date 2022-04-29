@@ -2,9 +2,11 @@
 #include "cutlvector.h"
 
 class CEntity;
-class IGlowManager {
+class IGlowManager 
+{
 public:
-	class CGlowObject {
+	class CGlowObject 
+    {
 	public:
         int nextFreeSlot;
 
