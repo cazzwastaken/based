@@ -126,8 +126,18 @@ public: // entity virtual functions
 		return memory::Call<bool>(this, 166);
 	}
 
+	constexpr void GetEyePosition(CVector& eyePosition) noexcept
+	{
+		memory::Call<void>(this, 285, std::ref(eyePosition));
+	}
+
 	constexpr CEntity* GetObserverTarget() noexcept
 	{
 		return memory::Call<CEntity*>(this, 295);
+	}
+
+	constexpr void GetAimPunch(CVector& aimPunch) noexcept
+	{
+		memory::Call<void>(this, 346, std::ref(aimPunch));
 	}
 };
