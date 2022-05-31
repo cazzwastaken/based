@@ -65,8 +65,32 @@ public:
 		FL_UNBLOCKABLE_BY_PLAYER = (1 << 31)
 	};
 
+	enum EWeaponType : int
+	{
+		WEAPONTYPE_KNIFE = 0,
+		WEAPONTYPE_PISTOL = 1,
+		WEAPONTYPE_SUBMACHINEGUN = 2,
+		WEAPONTYPE_RIFLE = 3,
+		WEAPONTYPE_SHOTGUN = 4,
+		WEAPONTYPE_SNIPER = 5,
+		WEAPONTYPE_MACHINEGUN = 6,
+		WEAPONTYPE_C4 = 7,
+		WEAPONTYPE_PLACEHOLDER = 8,
+		WEAPONTYPE_GRENADE = 9,
+		WEAPONTYPE_HEALTHSHOT = 11,
+		WEAPONTYPE_FISTS = 12,
+		WEAPONTYPE_BREACHCHARGE = 13,
+		WEAPONTYPE_BUMPMINE = 14,
+		WEAPONTYPE_TABLET = 15,
+		WEAPONTYPE_MELEE = 16
+	};
+
 public: // netvars
 	NETVAR(GetFlags, "CBasePlayer->m_fFlags", std::int32_t);
+	NETVAR(IsSoped, "CCSPlayer->m_bIsScoped", bool)
+	NETVAR(IsDefusing, "CCSPlayer->m_bIsDefusing", bool)
+	NETVAR(HasGunGameImmunity, "CCSPlayer->m_bGunGameImmunity", bool)
+	NETVAR(GetClip, "CBaseCombatWeapon->m_iClip1", int)
 
 public: // renderable virtual functions (+0x4)
 	constexpr CModel* GetModel() noexcept
@@ -126,6 +150,11 @@ public: // entity virtual functions
 		return memory::Call<bool>(this, 166);
 	}
 
+	constexpr CEntity* GetActiveWeapon() noexcept
+	{
+		return memory::Call<CEntity*>(this, 268);
+	}
+
 	constexpr void GetEyePosition(CVector& eyePosition) noexcept
 	{
 		memory::Call<void>(this, 285, std::ref(eyePosition));
@@ -139,5 +168,10 @@ public: // entity virtual functions
 	constexpr void GetAimPunch(CVector& aimPunch) noexcept
 	{
 		memory::Call<void>(this, 346, std::ref(aimPunch));
+	}
+
+	constexpr int GetWeaponType() noexcept
+	{
+		return memory::Call<int>(this, 455);
 	}
 };
