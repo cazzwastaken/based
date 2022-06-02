@@ -87,7 +87,7 @@ public:
 
 public: // netvars
 	NETVAR(GetFlags, "CBasePlayer->m_fFlags", std::int32_t);
-	NETVAR(IsSoped, "CCSPlayer->m_bIsScoped", bool)
+	NETVAR(IsScoped, "CCSPlayer->m_bIsScoped", bool)
 	NETVAR(IsDefusing, "CCSPlayer->m_bIsDefusing", bool)
 	NETVAR(HasGunGameImmunity, "CCSPlayer->m_bGunGameImmunity", bool)
 	NETVAR(GetClip, "CBaseCombatWeapon->m_iClip1", int)
