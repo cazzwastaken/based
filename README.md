@@ -5,10 +5,12 @@ This is a skeleton internal cheat base meant to be used for my [internal YouTube
 - [Chams / Colored Models](https://www.youtube.com/watch?v=xXhVCUieL08)
 - [Glow (Weapon, Player, Grenade, Bomb)](https://www.youtube.com/watch?v=QU3SN2UIAe4)
 - [ESP (Name, Box, Skeleton)](https://www.youtube.com/watch?v=ii7zhn6R9Ec)
+- [Aimbot (hitbox selection, fov, smoothing)](https://youtu.be/uoEPIOj3vmc)
 
 `To Come:`
 
-- Aimbot (hitbox selection, fov, smoothing)
+- Game Event Manager
+- Backtracking
 - And so on...
 
 ## ☂️ Features
