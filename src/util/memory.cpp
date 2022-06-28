@@ -6,8 +6,8 @@
 
 void memory::Setup() noexcept
 {
-	allocKeyValuesClient = PatternScan("client.dll", "FF 52 04 85 C0 74 0C 56") + 3;
-	allocKeyValuesEngine = PatternScan("engine.dll", "FF 52 04 85 C0 74 0C 56") + 3;
+	allocKeyValuesClient = PatternScan("client.dll", "85 C0 74 ? 6A ? 6A ? 56 8B C8 E8 ? ? ? ? 8B F0");
+	allocKeyValuesEngine = PatternScan("engine.dll", "85 C0 74 ? 51 6A ? 56 8B C8 E8 ? ? ? ? 8B F0");
     insertIntoTree = PatternScan("client.dll", "56 52 FF 50 18") + 5;
 
     keyValuesFromString = PatternScan("client.dll", "E8 ? ? ? ? 8B 0D ? ? ? ? 83 C4 04 8B F8 8B 11") + 1;
