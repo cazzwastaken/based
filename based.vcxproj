@@ -169,6 +169,7 @@
     <ClInclude Include="ext\minhook\hde\table64.h" />
     <ClInclude Include="ext\minhook\minhook.h" />
     <ClInclude Include="ext\minhook\trampoline.h" />
+    <ClInclude Include="ext\x86retspoof\x86RetSpoof.h" />
     <ClInclude Include="src\core\globals.h" />
     <ClInclude Include="src\core\hooks.h" />
     <ClInclude Include="src\core\interfaces.h" />

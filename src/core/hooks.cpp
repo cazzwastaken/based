@@ -2,6 +2,7 @@
 
 // include minhook for epic hookage
 #include "../../ext/minhook/minhook.h"
+#include "../../ext/x86retspoof/x86RetSpoof.h"
 
 #include <intrin.h>
 
@@ -52,9 +53,12 @@ void* __stdcall hooks::AllocKeyValuesMemory(const std::int32_t size) noexcept
 
 bool __stdcall hooks::CreateMove(float frameTime, CUserCmd* cmd) noexcept
 {
+	static const auto sequence = reinterpret_cast<std::uintptr_t>(memory::PatternScan("client.dll", "FF 23"));
+	const auto result = x86RetSpoof::invokeStdcall<bool>((uintptr_t)hooks::CreateMoveOriginal, sequence, frameTime, cmd);
+
 	// make sure this function is being called from CInput::CreateMove
-	if (!cmd->commandNumber)
-		return CreateMoveOriginal(interfaces::clientMode, frameTime, cmd);
+	if (!cmd || !cmd->commandNumber)
+		return result;
 
 	// this would be done anyway by returning true
 	if (CreateMoveOriginal(interfaces::clientMode, frameTime, cmd))

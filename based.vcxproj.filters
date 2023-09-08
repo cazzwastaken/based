@@ -170,5 +170,8 @@
     <ClInclude Include="src\hacks\misc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ext\x86retspoof\x86RetSpoof.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
